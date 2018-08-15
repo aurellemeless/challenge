@@ -10,6 +10,7 @@ angular.module('challenge')
         $scope.userList = [];
         $scope.save = function(){
             var newUser = $scope.user;
+            // add user to the list
             $scope.userList.push({
                 firstname : newUser.firstname,
                 lastname : newUser.lastname,
@@ -18,6 +19,7 @@ angular.module('challenge')
                 city : newUser.city,
                 country : newUser.country
             });
+            // reset the form
                $scope.user.firstname='';
                 $scope.user.lastname='';
                 $scope.user.age=0;
