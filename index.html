@@ -12,21 +12,11 @@
 
     <section>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">SAVICS  Challenge App</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                   
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="#/">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#/add">Add</a>
-                        </li>
-                      </ul>
-                    </div>
                   </nav>
         <div class="container">
             <div class="row">
@@ -40,50 +30,58 @@
                 <div class="row">
                     <div class="col">
                             <form>
-                                    <div class="form-group">
-                                      <input type="text" class="form-control" ng-model="user.firstname" id="field" aria-describedby="emailHelp" placeholder="First name">
-                               
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" ng-model="user.lastname" id="field2" aria-describedby="emailHelp" placeholder="Last name">
-                                
-                                    </div>
-            
-                                    <div class="form-group">
-                                            <input type="number" class="form-control" maxlength="3" step="1" ng-model="user.age" id="field3" aria-describedby="emailHelp" placeholder="Age">
+                                <div class="row">
+                                        <div class="form-group col-md-6">
+                                                <input type="text" class="form-control" ng-model="user.firstname" id="field" aria-describedby="emailHelp" placeholder="First name">
+                                         
+                                              </div>
+                                        <div class="form-group  col-md-6">
+                                            <input type="text" class="form-control" ng-model="user.lastname" id="field2" aria-describedby="emailHelp" placeholder="Last name">
                                     
                                         </div>
-                                        <div class="form-group">
-                                                <select name="city" id=""  ng-model="user.city"> 
-                                                    <option > Abidjan </option>
-                                                    <option> Brussel </option>
-                                                </select>
+                                </div>
+                                
+                                <div class="row">
+                                        <div class="form-group col-md-6" >
+                                                    
+                                                <input type="radio" name="sexe" value="male"  ng-model="user.sexe"  id="exampleInputPassword1">
+                                                <label for="exampleInputPassword1">Male</label>
+                                                <input type="radio" name="sexe" value="female"  ng-model="user.sexe" id="exampleInputPassword1">
+                                                <label for="exampleInputPassword1">Female</label>
+                                                
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                                <input type="number" class="form-control" maxlength="3" step="1" ng-model="user.age" id="field3" aria-describedby="emailHelp" placeholder="Age">
                                         
-                                            </div>
-                                            <div class="form-group">
-                                                    <select name="country"  ng-model="user.country" id=""> 
-                                                        <option>Belgium</option>
-                                                        <option>Côte d'Ivoire</option>
-                                                    </select>
-                                            
-                                                </div>
-                                    <div class="form-group">
-                                            <label for="exampleInputPassword1">Sexe</label>
-                    
-                                            <input type="radio" name="sexe" value="male"  ng-model="user.sexe" class="form-control" id="exampleInputPassword1">
-                                            <label for="exampleInputPassword1">Male</label>
-                                            <input type="radio" name="sexe" value="female"  ng-model="user.sexe" class="form-control" id="exampleInputPassword1">
-                                            <label for="exampleInputPassword1">Female</label>
-                                    </div>
+                                        </div>
 
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <select name="city" id=""  class="form-control"  ng-model="user.city"> 
+                                            <option > Abidjan </option>
+                                            <option> Brussel </option>
+                                        </select>
+                                
+                                    </div>
+                                    <div class="form-group  col-md-6">
+                                            <select name="country"  class="form-control"  ng-model="user.country" id=""> 
+                                                <option>Belgium</option>
+                                                <option>Côte d'Ivoire</option>
+                                            </select>
+                                    
+                                        </div>
+                                </div>
+                                    
                                     <div class="form-group">
                                             <label for="exampleInputPassword1">Living with Diabetes</label>
                     
-                                            <input type="radio" name="diabete" value="yes"  ng-model="user.diatete" class="form-control" id="exampleInputPassword1">
+                                            <input type="radio" name="diabete" value="yes"  ng-model="user.diabete"  id="exampleInputPassword1">
                                             <label for="exampleInputPassword1">Yes</label>
-                                            <input type="radio" name="diabete" value="no"  ng-model="user.diatete" class="form-control" id="exampleInputPassword1">
+                                            <input type="radio" name="diabete" value="no"  ng-model="user.diabete" id="exampleInputPassword1">
                                             <label for="exampleInputPassword1">No</label>
-                                            <input type="radio" name="diabete" value="unknown"  ng-model="user.diatete" class="form-control" id="exampleInputPassword1">
+                                            <input type="radio" name="diabete" value="unknown"  ng-model="user.diabete" id="exampleInputPassword1">
                                             <label for="exampleInputPassword1">Unknown</label>
                                     </div>
                                     <button type="button" class="btn btn-primary" ng-click="save()">Submit</button>
@@ -93,22 +91,25 @@
             </div>
 
         <div class="container">
-            <div class="row">
-                    <div class="col-12">
+            <div class="row" style="padding-top: 50px">
+                    <div class="col-md-8">
+                            <h2> List of Medical records </h2>
+                    </div>
+                    <div class="col-md-4" >
                             <div class="form-group form-check">
-                                <input type="checkbox" ng-model="onlyMinor" ng-checked="false" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" ng-model="onlyMinor" value="true" ng-checked="false" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Only Minors</label>
                                 </div>
                     </div>
                 <div class="col-12">
                      <table  ng-if="onlyMinor">
-                         <tr ng-repeat="row in userList" ng-show="row.age < 19">
+                         <tr ng-repeat="row in userList" ng-if="row.age < 19" class="table table-hover table-stripped">
                              <td>
                                 {{ row.firstname }} {{ row.lastname }} ( {{ row.sexe }} ), {{ row.age }} - {{ row.city }} ( {{ row.country }} )
                              </td>
                          </tr>
                      </table>
-                     <table ng-if="!onlyMinor">
+                     <table ng-if="!onlyMinor" class="table table-hover table-stripped">
                             <tr ng-repeat="row in userList">
                                 <td>
                                    {{ row.firstname }} {{ row.lastname }} ( {{ row.sexe }} ), {{ row.age }} - {{ row.city }} ( {{ row.country }} )
